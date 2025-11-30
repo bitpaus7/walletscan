@@ -1,0 +1,11 @@
+{
+  "frame": {
+    "version": "v2.0.0",
+    "name": "wealthscan",
+    "homeUrl": "https://wealthscan.vercel.app/",
+    "iconUrl": "https://wealthscan.vercel.app/icon.png",
+    "splashImageUrl": "https://wealthscan.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "webhookUrl": "https://api.neynar.com/f/app/b6e1603c-0fb6-411d-9b74-1887babf08cc/event"
+  }
+}
