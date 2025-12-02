@@ -1,11 +1,18 @@
 {
+  "accountAssociation": {
+    "header": "eyJmaWQiOjIzOTk1MywidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweGFjMDE0OEFhRjU1NDMwNTY4YjFDMzkzNzViNmI0QjExNmM4MTU4ODgifQ",
+    "payload": "eyJkb21haW4iOiJ3ZWFsdGhzY2FuLnZlcmNlbC5hcHAifQ",
+    "signature": "DtMISccXRIA3uNRlKRGimV5sFin7Cxtb4mQ+0mAepKVlLQAGwyNi5ekIAJM/td8hzixtKgagYje+7jOwsOhTQBw="
+  },
   "frame": {
-    "version": "v2.0.0",
-    "name": "wealthscan",
-    "homeUrl": "https://wealthscan.vercel.app/",
+    "version": "1",
+    "name": "Example Frame",
     "iconUrl": "https://wealthscan.vercel.app/icon.png",
+    "homeUrl": "https://wealthscan.vercel.app",
+    "imageUrl": "https://wealthscan.vercel.app/image.png",
+    "buttonTitle": "Check this out",
     "splashImageUrl": "https://wealthscan.vercel.app/splash.png",
-    "splashBackgroundColor": "#000000",
-    "webhookUrl": "https://api.neynar.com/f/app/b6e1603c-0fb6-411d-9b74-1887babf08cc/event"
+    "splashBackgroundColor": "#eeccff",
+    "webhookUrl": "https://wealthscan.vercel.app/api/webhook"
   }
-}
+} 
