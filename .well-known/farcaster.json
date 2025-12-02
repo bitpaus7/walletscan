@@ -1,16 +1,20 @@
 {
   "accountAssociation": {
-    "header": "eyJmaWQiOjIzOTk1MywidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweGFjMDE0OEFhRjU1NDMwNTY4YjFDMzkzNzViNmI0QjExNmM4MTU4ODgifQ",
-    "payload": "eyJkb21haW4iOiJ3ZWFsdGhzY2FuLnZlcmNlbC5hcHAifQ",
+    "header": "eyJmaWQiOjIzOTk1MywidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweGFjMDE0OEFhRjU1NDMwNTY4YjFDMzk3NzViNmI0QjExNmM4MTU4ODgifQ==",
+    "payload": "eyJkb21haW4iOiJ3ZWFsdGhzY2FuLnZlcmNlbC5hcHAifQ==",
     "signature": "DtMISccXRIA3uNRlKRGimV5sFin7Cxtb4mQ+0mAepKVlLQAGwyNi5ekIAJM/td8hzixtKgagYje+7jOwsOhTQBw="
   },
-  "version": "1",
-  "name": "Wealthscan",
-  "description": "Simple Farcaster Mini App",
-  "domain": "wealthscan.vercel.app",
-  "app": {
-    "url": "https://wealthscan.vercel.app",
-    "iconUrl": "https://wealthscan.vercel.app/icon.png",
-    "screenshotUrl": "https://wealthscan.vercel.app/screenshot.png"
+  "miniapp": {
+    "version": "1",
+    "name": "Wealthscan",                                   // Ganti kalau mau nama lebih keren
+    "description": "Scan & track your onchain wealth easily", // Maks 130 karakter, wajib isi yang menarik
+    "iconUrl": "https://wealthscan.vercel.app/icon.png",     // 1:1 ratio, minimal 200×200 px
+    "homeUrl": "https://wealthscan.vercel.app/",            // URL yang dibuka saat user launch app
+    "imageUrl": "https://wealthscan.vercel.app/og.png",      // Gambar preview saat di-share (rasio 3:2 atau 1.91:1)
+    "primaryCategory": "finance",                           // Pilih satu: finance, social, games, utilities, dll.
+    "tags": ["wealth", "portfolio", "onchain", "tracker"],  // Maks 5 tag, bantu discovery
+    "splashImageUrl": "https://wealthscan.vercel.app/splash.png",   // Optional tapi sangat disarankan
+    "splashBackgroundColor": "#000000"                      // Warna background splash (hex)
+  },
+  "webhookUrl": "https://wealthscan.vercel.app/api/webhook"   // Optional, hapus baris ini kalau belum pakai
   }
-}
