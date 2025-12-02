@@ -107,88 +107,56 @@
     .token-name { font-size: 16px; }
   }
 </style>
-<!-- Existing stuff... -->
-  
-  <!-- Farcaster Mini App Meta (wajib buat preview & embeds) -->
-  <meta name="fc:miniapp" content='{"version":"1","name":"Crypto Wealth Scanner","iconUrl":"https://wealthscan.vercel.app/icon.png","homeUrl":"https://wealthscan.vercel.app/"}' />
-  
-  <!-- OpenGraph Tags (buat rich preview di casts & preview tool) -->
-  <meta property="og:title" content="Crypto Wealth Scanner" />
-  <meta property="og:description" content="Scan & track your onchain wealth in one click – simple, secure Mini App on Farcaster" />
-  <meta property="og:image" content="https://wealthscan.vercel.app/image.png" />  <!-- Gambar preview 1200x630 px -->
-  <meta property="og:url" content="https://wealthscan.vercel.app/" />
-  <meta property="og:type" content="website" />
-  
-  <!-- Tambahan buat mobile/preview -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Crypto Wealth Scanner" />
-  <meta name="twitter:description" content="Enter wallet address to scan portfolio" />
-  <meta name="twitter:image" content="https://wealthscan.vercel.app/image.png" />
-  
 
   
-<script type="module">
-  import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk@latest";
-
-  // Tunggu halaman load
-  window.addEventListener("load", async () => {
-    try {
-      await sdk.actions.ready();   // Ini yang menghilangkan splash screen otomatis
-      console.log("Mini App SDK ready!");
-
-      // Optional: langsung munculin tombol "Add to Apps" (recommended)
-      const addButton = document.createElement("button");
-      addButton.textContent = "Add to Warpcast Apps";
-      addButton.style.cssText = "position:fixed;bottom:20px;right:20px;z-index:9999;padding:12px 20px;background:#a855f7;color:white;border:none;border-radius:12px;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,0.3);";
-      addButton.onclick = () => sdk.actions.addMiniApp();
-      document.body.appendChild(addButton);
-    } catch (e) {
-      console.log("Bukan di dalam Warpcast / belum dibuka sebagai Mini App");
-    }
-  });
-</script>
-
   <head>
-  <!-- Existing stuff... -->
-  
-  <!-- Farcaster Mini App Meta (wajib buat preview & embeds) -->
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Wealth Scanner</title>
+  <meta name="description" content="Scan & track your onchain wealth in one click" />
+
+  <!-- Farcaster Mini App Meta (WAJIB) -->
   <meta name="fc:miniapp" content='{"version":"1","name":"Crypto Wealth Scanner","iconUrl":"https://wealthscan.vercel.app/icon.png","homeUrl":"https://wealthscan.vercel.app/"}' />
-  
-  <!-- OpenGraph Tags (buat rich preview di casts & preview tool) -->
+
+  <!-- OpenGraph Tags (biar preview & cast jadi cantik) -->
   <meta property="og:title" content="Crypto Wealth Scanner" />
-  <meta property="og:description" content="Scan & track your onchain wealth in one click – simple, secure Mini App on Farcaster" />
-  <meta property="og:image" content="https://wealthscan.vercel.app/image.png" />  <!-- Gambar preview 1200x630 px -->
+  <meta property="og:description" content="Enter wallet address → instantly see portfolio & net worth" />
+  <meta property="og:image" content="https://wealthscan.vercel.app/og-image.png" />
   <meta property="og:url" content="https://wealthscan.vercel.app/" />
   <meta property="og:type" content="website" />
-  
-  <!-- Tambahan buat mobile/preview -->
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Crypto Wealth Scanner" />
-  <meta name="twitter:description" content="Enter wallet address to scan portfolio" />
-  <meta name="twitter:image" content="https://wealthscan.vercel.app/image.png" />
-  
-  <!-- SDK Script (kalau belum ada, tambahin ini sebelum </body>) -->
+  <meta name="twitter:description" content="Simple onchain portfolio tracker" />
+  <meta name="twitter:image" content="https://wealthscan.vercel.app/og-image.png" />
+
+  <!-- Farcaster Mini App SDK (wajib) -->
   <script type="module">
     import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk@latest";
+
     window.addEventListener("load", async () => {
       try {
-        await sdk.actions.ready();  // Hilangkan splash screen
+        // Bilang ke Farcaster bahwa app sudah siap → splash screen otomatis ilang
+        await sdk.actions.ready();
         console.log("Mini App ready!");
-        // Optional: Tambah tombol add kalau di-preview
-        if (window.location.hash.includes('preview')) {  // Cuma di preview tool
-          const btn = document.createElement("button");
-          btn.textContent = "Add to Farcaster Apps";
-          btn.style.cssText = "position:fixed;bottom:20px;right:20px;z-index:9999;padding:10px 20px;background:#a855f7;color:white;border:none;border-radius:8px;";
-          btn.onclick = () => sdk.actions.addMiniApp();
-          document.body.appendChild(btn);
-        }
+
+        // Optional: tombol Add manual (muncul di preview & browser)
+        const btn = document.createElement("button");
+        btn.textContent = "Add to Farcaster Apps";
+        btn.style.cssText = `
+          position:fixed; bottom:20px; right:20px; z-index:99999;
+          padding:12px 24px; background:#a855f7; color:white;
+          border:none; border-radius:50px; font-weight:bold;
+          box-shadow:0 4px 20px rgba(168,85,247,0.4);
+        `;
+        btn.onclick = () => sdk.actions.addMiniApp();
+        document.body.appendChild(btn);
+
       } catch (e) {
-        console.log("Not in Farcaster context");
+        console.log("Bukan di dalam Farcaster / belum Mini App context");
       }
     });
   </script>
-  
-  
 
 </head>
 <body>
