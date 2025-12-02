@@ -4,15 +4,13 @@
     "payload": "eyJkb21haW4iOiJ3ZWFsdGhzY2FuLnZlcmNlbC5hcHAifQ",
     "signature": "DtMISccXRIA3uNRlKRGimV5sFin7Cxtb4mQ+0mAepKVlLQAGwyNi5ekIAJM/td8hzixtKgagYje+7jOwsOhTQBw="
   },
-  "frame": {
-    "version": "1",
-    "name": "Example Frame",
+  "version": "1",
+  "name": "Wealthscan",
+  "description": "Simple Farcaster Mini App",
+  "domain": "wealthscan.vercel.app",
+  "app": {
+    "url": "https://wealthscan.vercel.app",
     "iconUrl": "https://wealthscan.vercel.app/icon.png",
-    "homeUrl": "https://wealthscan.vercel.app",
-    "imageUrl": "https://wealthscan.vercel.app/image.png",
-    "buttonTitle": "Check this out",
-    "splashImageUrl": "https://wealthscan.vercel.app/splash.png",
-    "splashBackgroundColor": "#eeccff",
-    "webhookUrl": "https://wealthscan.vercel.app/api/webhook"
+    "screenshotUrl": "https://wealthscan.vercel.app/screenshot.png"
   }
-} 
+}
