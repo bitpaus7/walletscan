@@ -3,5 +3,14 @@
     "header": "eyJmaWQiOjIzOTk1MywidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweGFjMDE0OEFhRjU1NDMwNTY4YjFDMzkzNzViNmI0QjExNmM4MTU4ODgifQ",
     "payload": "eyJkb21haW4iOiJ3ZWFsdGhzY2FuLnZlcmNlbC5hcHAifQ",
     "signature": "DtMISccXRIA3uNRlKRGimV5sFin7Cxtb4mQ+0mAepKVlLQAGwyNi5ekIAJM/td8hzixtKgagYje+7jOwsOhTQBw="
+  },
+  "version": "1",
+  "name": "Wealthscan",
+  "description": "Simple Farcaster Mini App",
+  "domain": "wealthscan.vercel.app",
+  "app": {
+    "url": "https://wealthscan.vercel.app",
+    "iconUrl": "https://wealthscan.vercel.app/icon.png",
+    "screenshotUrl": "https://wealthscan.vercel.app/screenshot.png"
   }
 }
