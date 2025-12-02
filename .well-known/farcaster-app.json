@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "name": "Wealthscan",
+  "description": "Simple Farcaster Mini App",
+  "icon_url": "https://wealthscan.vercel.app/icon.png",
+  "screenshot_url": "https://wealthscan.vercel.app/screenshot.png",
+  "app_url": "https://wealthscan.vercel.app",
+  "developer": {
+    "name": "Wealthscan",
+    "website": "https://wealthscan.vercel.app"
+  }
+}
