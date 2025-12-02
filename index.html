@@ -107,7 +107,26 @@
     .token-name { font-size: 16px; }
   }
 </style>
+<!-- Existing stuff... -->
+  
+  <!-- Farcaster Mini App Meta (wajib buat preview & embeds) -->
+  <meta name="fc:miniapp" content='{"version":"1","name":"Crypto Wealth Scanner","iconUrl":"https://wealthscan.vercel.app/icon.png","homeUrl":"https://wealthscan.vercel.app/"}' />
+  
+  <!-- OpenGraph Tags (buat rich preview di casts & preview tool) -->
+  <meta property="og:title" content="Crypto Wealth Scanner" />
+  <meta property="og:description" content="Scan & track your onchain wealth in one click – simple, secure Mini App on Farcaster" />
+  <meta property="og:image" content="https://wealthscan.vercel.app/image.png" />  <!-- Gambar preview 1200x630 px -->
+  <meta property="og:url" content="https://wealthscan.vercel.app/" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Tambahan buat mobile/preview -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crypto Wealth Scanner" />
+  <meta name="twitter:description" content="Enter wallet address to scan portfolio" />
+  <meta name="twitter:image" content="https://wealthscan.vercel.app/image.png" />
+  
 
+  
 <script type="module">
   import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk@latest";
 
@@ -128,6 +147,47 @@
     }
   });
 </script>
+
+  <head>
+  <!-- Existing stuff... -->
+  
+  <!-- Farcaster Mini App Meta (wajib buat preview & embeds) -->
+  <meta name="fc:miniapp" content='{"version":"1","name":"Crypto Wealth Scanner","iconUrl":"https://wealthscan.vercel.app/icon.png","homeUrl":"https://wealthscan.vercel.app/"}' />
+  
+  <!-- OpenGraph Tags (buat rich preview di casts & preview tool) -->
+  <meta property="og:title" content="Crypto Wealth Scanner" />
+  <meta property="og:description" content="Scan & track your onchain wealth in one click – simple, secure Mini App on Farcaster" />
+  <meta property="og:image" content="https://wealthscan.vercel.app/image.png" />  <!-- Gambar preview 1200x630 px -->
+  <meta property="og:url" content="https://wealthscan.vercel.app/" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Tambahan buat mobile/preview -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crypto Wealth Scanner" />
+  <meta name="twitter:description" content="Enter wallet address to scan portfolio" />
+  <meta name="twitter:image" content="https://wealthscan.vercel.app/image.png" />
+  
+  <!-- SDK Script (kalau belum ada, tambahin ini sebelum </body>) -->
+  <script type="module">
+    import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk@latest";
+    window.addEventListener("load", async () => {
+      try {
+        await sdk.actions.ready();  // Hilangkan splash screen
+        console.log("Mini App ready!");
+        // Optional: Tambah tombol add kalau di-preview
+        if (window.location.hash.includes('preview')) {  // Cuma di preview tool
+          const btn = document.createElement("button");
+          btn.textContent = "Add to Farcaster Apps";
+          btn.style.cssText = "position:fixed;bottom:20px;right:20px;z-index:9999;padding:10px 20px;background:#a855f7;color:white;border:none;border-radius:8px;";
+          btn.onclick = () => sdk.actions.addMiniApp();
+          document.body.appendChild(btn);
+        }
+      } catch (e) {
+        console.log("Not in Farcaster context");
+      }
+    });
+  </script>
+  
   
 
 </head>
