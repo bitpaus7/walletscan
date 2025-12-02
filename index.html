@@ -108,6 +108,28 @@
   }
 </style>
 
+<script type="module">
+  import { sdk } from "https://esm.sh/@farcaster/miniapp-sdk@latest";
+
+  // Tunggu halaman load
+  window.addEventListener("load", async () => {
+    try {
+      await sdk.actions.ready();   // Ini yang menghilangkan splash screen otomatis
+      console.log("Mini App SDK ready!");
+
+      // Optional: langsung munculin tombol "Add to Apps" (recommended)
+      const addButton = document.createElement("button");
+      addButton.textContent = "Add to Warpcast Apps";
+      addButton.style.cssText = "position:fixed;bottom:20px;right:20px;z-index:9999;padding:12px 20px;background:#a855f7;color:white;border:none;border-radius:12px;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,0.3);";
+      addButton.onclick = () => sdk.actions.addMiniApp();
+      document.body.appendChild(addButton);
+    } catch (e) {
+      console.log("Bukan di dalam Warpcast / belum dibuka sebagai Mini App");
+    }
+  });
+</script>
+  
+
 </head>
 <body>
 
