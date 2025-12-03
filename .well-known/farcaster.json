@@ -14,7 +14,8 @@
     "primaryCategory": "finance",
     "tags": ["wealth", "scanner", "portfolio", "onchain"],
     "splashImageUrl": "https://i.ibb.co/0jR7g3Q/og.png",
-    "splashBackgroundColor": "#000000",
-    "webhookUrl": "https://wealthscan.vercel.app/api/webhook"
-  }
+    "splashBackgroundColor": "#000000"
+  },
+  "webhookUrl": "https://wealthscan.vercel.app/api/webhook",
+  "noindex": false
 }
