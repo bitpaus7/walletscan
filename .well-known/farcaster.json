@@ -8,7 +8,7 @@
     "version": "1",
     "name": "Crypto Wealth Scanner",
     "description": "Scan wallet → lihat total kekayaan onchain",
-    "iconUrl": "https://i.ibb.co/0jR7g3Q/icon.png",
+    "iconUrl": "https://raw.githubusercontent.com/bitpaus7/walletscan/refs/heads/main/.well-known/icon.png",
     "homeUrl": "https://wealthscan.vercel.app/",
     "imageUrl": "https://i.ibb.co/0jR7g3Q/og.png",
     "primaryCategory": "finance",
