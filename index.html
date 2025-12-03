@@ -57,17 +57,6 @@
   </script>
 
   <!-- Script scanning kamu (ganti nanti kalau udah ada) -->
-  <script>
-    function cekWallet() {
-      const wallet = document.getElementById("wallet").value;
-      if (!wallet) return alert("Masukkan wallet dulu!");
-      document.getElementById("loader").style.display = "block";
-      document.getElementById("result").innerHTML = "";
-      setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("result").innerHTML = `<p style="color:#0aff9d;font-size:20px">Fitur scanning segera hadir!</p>`;
-      }, 2000);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
