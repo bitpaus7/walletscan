@@ -8,12 +8,12 @@
     "version": "1",
     "name": "Crypto Wealth Scanner",
     "description": "Scan wallet → lihat total kekayaan onchain",
-    "iconUrl": "https://i.ibb.co/0jR7g3Q/icon.png",
+    "iconUrl": "icon.png",
     "homeUrl": "https://wealthscan.vercel.app/",
-    "imageUrl": "https://i.ibb.co/0jR7g3Q/og.png",
+    "imageUrl": "icon.png",
     "primaryCategory": "finance",
     "tags": ["wealth", "scanner", "portfolio", "onchain"],
-    "splashImageUrl": "https://i.ibb.co/0jR7g3Q/og.png",
+    "splashImageUrl": "icon.png",
     "splashBackgroundColor": "#000000",
     "webhookUrl": "https://wealthscan.vercel.app/api/webhook"
   }
